@@ -18,9 +18,9 @@ router.get('/burgers', function (req, res) {
 });
 
 router.post('/burgers/create', function (req, res) {
-  burger.create(['name', 'devoured'], [req.body.name, req.body.devoured], function () {
-    res.redirect('/burgers');
-  });
+  burger.create(['burger_name', 'devoured'], [req.body.name, req.body.devoured], function () {
+      res.redirect('/burgers');
+    });
 });
 
 router.put('/burgers/update/:id', function (req, res) {
